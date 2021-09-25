@@ -21,6 +21,8 @@ public class movement2d : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.E))
+            CheckInteraction();
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
     }
@@ -28,5 +30,20 @@ public class movement2d : MonoBehaviour
     private void FixedUpdate()
     {
         body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
+    }
+
+    public void OpenInteractableIcon()
+    {
+        //interactIcon.SetActive(true);
+    }
+
+    public void CloseInteractableIcon()
+    {
+        //interactIcon.SetActive(false);
+    }
+
+    public void CheckInteraction()
+    {
+        //RaycastHit2D[] hits = Physics2D.BoxCastAll(transform.position);
     }
 }

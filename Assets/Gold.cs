@@ -44,8 +44,21 @@ public class Gold : MonoBehaviour
         }
     }
 
+    float time = 0;
+
     private void Update()
     {
+        if (uses < 10)
+        {
+            time = time + Time.deltaTime;
+
+            if (time > 3)
+            {
+                uses++;
+                time = 0;
+            }
+        }
+
         if (uses <= 0)
         {
             return;

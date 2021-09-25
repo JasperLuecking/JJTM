@@ -44,8 +44,26 @@ public class Stone : MonoBehaviour
         }
     }
 
+<<<<<<< HEAD
+    float time = 0;
+
     private void Update()
     {
+        if (uses < 10)
+        {
+            time = time + Time.deltaTime;
+
+            if (time > 3)
+            {
+                uses++;
+                time = 0;
+            }
+        }
+
+=======
+    private void Update()
+    {
+>>>>>>> master
         if(uses <= 0)
         {
             return;
@@ -63,10 +81,12 @@ public class Stone : MonoBehaviour
             }
         }
     }
+<<<<<<< HEAD
+=======
 }
 
 public static class Inventory
 {
     public static int stone = 0;
-    public static int gold = 0;
+>>>>>>> master
 }
